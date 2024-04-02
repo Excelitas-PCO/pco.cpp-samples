@@ -11,6 +11,7 @@
         "CMAKE_BUILD_TYPE": "Debug",
         "CMAKE_INSTALL_PREFIX": "${sourceDir}/${presetName}/install",
         "PCO_PACKAGE_INSTALL_DIR": "/opt/pco/pco.cpp",
+        "QT_ROOT_DIR": "/opt/Qt/6.4.2/gcc_64/",
         "AUTO_UPDATE_PCO_PACKAGE": true
       }
     },
@@ -24,6 +25,7 @@
         "CMAKE_BUILD_TYPE": "Release",
         "CMAKE_INSTALL_PREFIX": "${sourceDir}/${presetName}/install",
         "PCO_PACKAGE_INSTALL_DIR": "/opt/pco/pco.cpp",
+        "QT_ROOT_DIR": "/opt/Qt/6.4.2/gcc_64/",
         "AUTO_UPDATE_PCO_PACKAGE": true
       }
     },
@@ -37,6 +39,7 @@
         "CMAKE_BUILD_TYPE": "Debug",
         "CMAKE_INSTALL_PREFIX": "${sourceDir}/${presetName}/install",
         "PCO_PACKAGE_INSTALL_DIR": "C:/Program Files/PCO Digital Camera Toolbox/pco.cpp",
+        "QT_ROOT_DIR": "C:/Qt/6.4.2/msvc2019_64/",
         "AUTO_UPDATE_PCO_PACKAGE": true
       }
     },
@@ -50,6 +53,7 @@
         "CMAKE_BUILD_TYPE": "Release",
         "CMAKE_INSTALL_PREFIX": "${sourceDir}/${presetName}/install",
         "PCO_PACKAGE_INSTALL_DIR": "C:/Program Files/PCO Digital Camera Toolbox/pco.cpp",
+        "QT_ROOT_DIR": "C:/Qt/6.4.2/msvc2019_64/",
         "AUTO_UPDATE_PCO_PACKAGE": true
       }
     }

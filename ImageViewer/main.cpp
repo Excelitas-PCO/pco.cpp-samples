@@ -4,6 +4,8 @@ int main(int argc, char* argv[]) {
   QApplication app(argc, argv);
   QGuiApplication::setApplicationDisplayName(ImageViewer::tr("Image Viewer"));
 
+  app.setStyle("Fusion");
+
   ImageViewer imageViewer;
   imageViewer.show();
 

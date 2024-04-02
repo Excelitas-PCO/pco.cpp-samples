@@ -1,8 +1,8 @@
 #pragma once
 #include <QMainWindow>
-#include "../../pco.camera/stdafx.h"
-#include "../../pco.camera/camera.h"
-#include "../../pco.camera/cameraexception.h"
+#include "pco.camera/stdafx.h"
+#include "pco.camera/camera.h"
+#include "pco.camera/cameraexception.h"
 #include <QColorSpace>
 #include <QLabel>
 #include <QMenuBar>

@@ -22,6 +22,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 add_subdirectory(${CMAKE_SOURCE_DIR}/externals/pco)
 set(PCO_FOLDER "${CMAKE_SOURCE_DIR}/externals/pco")
 
+add_subdirectory(${CMAKE_SOURCE_DIR}/ImageViewer)
 add_subdirectory(${CMAKE_SOURCE_DIR}/ColorConvertExample)
 add_subdirectory(${CMAKE_SOURCE_DIR}/FileModeExample)
 add_subdirectory(${CMAKE_SOURCE_DIR}/MultiCameraExample)
