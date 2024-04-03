@@ -5,10 +5,12 @@ if(${AUTO_UPDATE_PCO_PACKAGE})
       ${PCO_PACKAGE_INSTALL_DIR}/pco.camera
       ${PCO_PACKAGE_INSTALL_DIR}/include
       ${PCO_PACKAGE_INSTALL_DIR}/lib
-      ${PCO_PACKAGE_INSTALL_DIR}/bin
       DESTINATION
       ${CMAKE_CURRENT_SOURCE_DIR}
       )
+  if(WIN32)
+      file(COPY ${PCO_PACKAGE_INSTALL_DIR}/bin DESTINATION ${CMAKE_CURRENT_SOURCE_DIR})
+  endif()
 endif()
 
 add_library(pco_convert SHARED IMPORTED GLOBAL)

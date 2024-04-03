@@ -33,10 +33,12 @@
 
 # Build results
 [Dd]ebug/
+[Dd]ebug_lnx/
 [Dd]ebug_x64/
 [Dd]ebug_Win32/
 [Dd]ebugPublic/
 [Rr]elease/
+[Rr]elease_lnx/
 [Rr]elease_x64/
 [Rr]elease_Win32/
 [Rr]eleases/
