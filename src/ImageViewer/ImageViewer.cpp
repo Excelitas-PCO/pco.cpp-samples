@@ -251,7 +251,7 @@ void ImageViewer::createCameraSettings()
       pixelRate->addItem(tr(std::to_string(rate).c_str()));
   }
 
-  pixelRateLayout = new QVBoxLayout(this);
+  pixelRateLayout = new QVBoxLayout();
   pixelRateLayout->addWidget(pixelRate);
   pixelRateBox = new QGroupBox(tr("Pixelrate:"), this);
   pixelRateBox->setLayout(pixelRateLayout);
@@ -265,7 +265,7 @@ void ImageViewer::createCameraSettings()
   triggerMode->addItem(tr("Soft Trigger"));
   triggerMode->addItem(tr("Ext. Start"));
   triggerMode->addItem(tr("Ext. Exp. Ctrl"));
-  triggerModeLayout = new QVBoxLayout(this);
+  triggerModeLayout = new QVBoxLayout();
   triggerModeLayout->addWidget(triggerMode);
   triggerModeBox = new QGroupBox(tr("Triggermode:"), this);
   triggerModeBox->setLayout(triggerModeLayout);
@@ -325,7 +325,7 @@ void ImageViewer::createCameraSettings()
       roiY1->setMinimum(cam->getDescription().max_height / 2 + cam->getDescription().roi_step_vert);
     }
   }
-  roiInnerLayout = new QGridLayout(this);
+  roiInnerLayout = new QGridLayout();
   roiInnerLayout->addWidget(roiX0Label, 0, 0);
   roiInnerLayout->addWidget(roiX0, 0, 1);
   roiInnerLayout->addWidget(roiX1Label, 1, 0);
@@ -339,7 +339,7 @@ void ImageViewer::createCameraSettings()
   roiInnerBox->setLayout(roiInnerLayout);
 
   roiOuterLabel = new QLabel(tr("ROI:"));
-  roiOuterLayout = new QVBoxLayout(this);
+  roiOuterLayout = new QVBoxLayout();
   roiOuterLayout->addWidget(roiOuterLabel);
   roiOuterLayout->addWidget(roiInnerBox);
 
@@ -364,7 +364,7 @@ void ImageViewer::createCameraSettings()
   QGroupBox* noiseFilterBox;
   QVBoxLayout* noiseFilterLayout;
   noiseFilter = new QCheckBox(tr("Noisefilter"), this);
-  noiseFilterLayout = new QVBoxLayout(this);
+  noiseFilterLayout = new QVBoxLayout();
   noiseFilterLayout->addWidget(noiseFilter);
   noiseFilterBox = new QGroupBox(this);
   noiseFilterBox->setLayout(noiseFilterLayout);

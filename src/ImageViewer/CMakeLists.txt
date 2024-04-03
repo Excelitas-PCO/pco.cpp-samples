@@ -12,10 +12,12 @@ set(PROJECT_SOURCES
     ${PCO_FOLDER}/pco.camera/image.cpp
 )
 
+# This is only to get the var QT_VERSION_MAJOR
 find_package(QT NAMES Qt6 REQUIRED COMPONENTS
     Widgets
     Gui
     Core)
+#this does the actual package search
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS
     Widgets
     Gui
@@ -25,7 +27,7 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
-  qt_add_executable(${PROJECT_NAME} ${PROJECT_SOURCES})
+  qt_add_executable(${PROJECT_NAME} MANUAL_FINALIZATION ${PROJECT_SOURCES})
 else()
   add_executable(${PROJECT_NAME} ${PROJECT_SOURCES})
 endif()
@@ -71,13 +73,13 @@ if(WIN32)
   install(DIRECTORY "${CMAKE_BINARY_DIR}/platforms" DESTINATION bin)
   install(DIRECTORY "${CMAKE_BINARY_DIR}/imageformats" DESTINATION bin)
 else()
-  file(GLOB LIB_FILES_CORE "${QT_ROOT_DIR}/lib/Qt${QT_VERSION_MAJOR}Core.so*")
-  file(GLOB LIB_FILES_GUI "${QT_ROOT_DIR}/lib/Qt${QT_VERSION_MAJOR}Gui.so*")
-  file(GLOB LIB_FILES_OPENGL "${QT_ROOT_DIR}/lib/Qt${QT_VERSION_MAJOR}OpenGL.so*")
-  file(GLOB LIB_FILES_OPENGLWIDGETS "${QT_ROOT_DIR}/lib/Qt${QT_VERSION_MAJOR}OpenGLWidgets.so*")
-  file(GLOB LIB_FILES_WIDGETS "${QT_ROOT_DIR}/lib/Qt${QT_VERSION_MAJOR}Widgets.so*")
-  file(GLOB LIB_FILES_DBUS "${QT_ROOT_DIR}/lib/Qt${QT_VERSION_MAJOR}DBus.so*")
-  file(GLOB LIB_FILES_XCB "${QT_ROOT_DIR}/lib/Qt${QT_VERSION_MAJOR}XcbQpa.so*")
+  file(GLOB LIB_FILES_CORE "${QT_ROOT_DIR}/lib/libQt${QT_VERSION_MAJOR}Core.so*")
+  file(GLOB LIB_FILES_GUI "${QT_ROOT_DIR}/lib/libQt${QT_VERSION_MAJOR}Gui.so*")
+  file(GLOB LIB_FILES_OPENGL "${QT_ROOT_DIR}/lib/libQt${QT_VERSION_MAJOR}OpenGL.so*")
+  file(GLOB LIB_FILES_OPENGLWIDGETS "${QT_ROOT_DIR}/lib/libQt${QT_VERSION_MAJOR}OpenGLWidgets.so*")
+  file(GLOB LIB_FILES_WIDGETS "${QT_ROOT_DIR}/lib/libQt${QT_VERSION_MAJOR}Widgets.so*")
+  file(GLOB LIB_FILES_DBUS "${QT_ROOT_DIR}/lib/libQt${QT_VERSION_MAJOR}DBus.so*")
+  file(GLOB LIB_FILES_XCB "${QT_ROOT_DIR}/lib/libQt${QT_VERSION_MAJOR}XcbQpa.so*")
   file(GLOB LIB_FILES_ICU "${QT_ROOT_DIR}/lib/libicu*.so*")
   file(COPY 
     ${LIB_FILES_CORE} 
@@ -88,7 +90,7 @@ else()
     ${LIB_FILES_DBUS} 
     ${LIB_FILES_XCB}
     ${LIB_FILES_ICU}
-    DESTINATION "${CMAKE_BINARY_DIR}")
+    DESTINATION "${CMAKE_BINARY_DIR}/lib")
   file(COPY "${QT_ROOT_DIR}/plugins/platforms" DESTINATION "${CMAKE_BINARY_DIR}/plugins")
   file(COPY "${QT_ROOT_DIR}/plugins/imageformats" DESTINATION "${CMAKE_BINARY_DIR}/plugins")
 
@@ -103,7 +105,7 @@ else()
     ${LIB_FILES_DBUS} 
     ${LIB_FILES_XCB}
     ${LIB_FILES_ICU} 
-    DESTINATION bin)
-  install(FILES "${QT_ROOT_DIR}/plugins/platforms" DESTINATION bin/plugins)
-  install(FILES "${QT_ROOT_DIR}/plugins/imageformats" DESTINATION bin/plugins)
+    DESTINATION lib)
+  install(DIRECTORY "${QT_ROOT_DIR}/plugins/platforms" DESTINATION plugins)
+  install(DIRECTORY "${QT_ROOT_DIR}/plugins/imageformats" DESTINATION plugins)
 endif()

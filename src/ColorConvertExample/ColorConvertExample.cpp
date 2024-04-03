@@ -33,10 +33,10 @@ int main()
     if (!cam.isColored())
     {
       std::string lut_file;
-      std::cout << "Enter filepath to LUT file \n(default: /opt/pco/pco.cpp/samples/ColorConvertExample/lut/LUT_rainbow.lt1):" << std::endl;
+      std::cout << "Enter filepath to LUT file \n(default: lut/LUT_rainbow.lt1):" << std::endl;
       std::getline(std::cin, lut_file);
       if (lut_file.empty())
-        lut_file = "/opt/pco/pco.cpp/samples/ColorConvertExample/lut/LUT_rainbow.lt1";
+        lut_file = "./lut/LUT_rainbow.lt1";
       if (!std::filesystem::exists(lut_file))
         throw pco::CameraException("path to LUT file is invalid."); 
 

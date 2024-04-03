@@ -16,3 +16,7 @@ target_link_libraries(${PROJECT_NAME} PRIVATE sc2_cam)
 target_link_libraries(${PROJECT_NAME} PRIVATE pco_recorder)
 
 install(TARGETS ${PROJECT_NAME})
+
+# Copy and install also lut
+file(COPY "${CMAKE_CURRENT_SOURCE_DIR}/lut" DESTINATION "${CMAKE_BINARY_DIR}")
+install(DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/lut" DESTINATION bin)
