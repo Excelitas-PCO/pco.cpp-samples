@@ -51,7 +51,7 @@ Or leverage any open source library for storing image files, e.g. OpenCV.
 
 ### SimpleExample_FIFO
 
-This example is similar to **SimpleExample** but uses the ``pco::RecordMode::fifo``` instead of ```pco::RecordMode::sequence```,
+This example is similar to **SimpleExample** but uses the ```pco::RecordMode::fifo``` instead of ```pco::RecordMode::sequence```,
 so that the images are automatically read in a sequential order.
 
 ### SimpleExample_CamRam
