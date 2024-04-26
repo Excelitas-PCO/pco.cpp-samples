@@ -2,6 +2,19 @@
 This project contains different sample projects showing how to use Excelitas PCO's pco.cpp package,   
 which can be downloaded here: [pco.cpp](https://www.excelitas.com/product/pco-software-development-kits#custom-tab-c__)
 
+## Requirements
+- Windows or Linux 
+
+When using "x64 Native Tools Command Prompt for VS 2022" 
+- Visual Studio 2019/2022
+- QT for MSVC 2019
+
+or when using a terminal
+- Ninja Make
+- CMake
+- Any CPP Compiler, e.g. minGW
+- QT for minGW/your compiler
+
 ## Project Structure
 
 ```
