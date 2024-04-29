@@ -5,7 +5,7 @@ which can be downloaded here: [pco.cpp](https://www.excelitas.com/product/pco-so
 ## Requirements
 - Windows or Linux 
 
-When using "x64 Native Tools Command Prompt for VS 2022" 
+When using "x64 Native Tools Command Prompt for VS 2019/2022" 
 - Visual Studio 2019/2022
 - QT for MSVC 2019 (if you want to build the ImageViewer example)
 
