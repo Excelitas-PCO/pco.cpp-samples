@@ -23,10 +23,11 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 add_subdirectory(${CMAKE_SOURCE_DIR}/externals/pco)
 set(PCO_FOLDER "${CMAKE_SOURCE_DIR}/externals/pco")
 
-add_subdirectory(${CMAKE_SOURCE_DIR}/src/ImageViewer)
 add_subdirectory(${CMAKE_SOURCE_DIR}/src/ColorConvertExample)
 add_subdirectory(${CMAKE_SOURCE_DIR}/src/FileModeExample)
 add_subdirectory(${CMAKE_SOURCE_DIR}/src/MultiCameraExample)
 add_subdirectory(${CMAKE_SOURCE_DIR}/src/SimpleExample)
 add_subdirectory(${CMAKE_SOURCE_DIR}/src/SimpleExample_CamRam)
 add_subdirectory(${CMAKE_SOURCE_DIR}/src/SimpleExample_FIFO)
+# Image Viewer requires Qt installation, thus disabled by default
+#add_subdirectory(${CMAKE_SOURCE_DIR}/src/ImageViewer)
