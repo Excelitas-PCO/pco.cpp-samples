@@ -7,13 +7,13 @@ which can be downloaded here: [pco.cpp](https://www.excelitas.com/product/pco-so
 
 When using "x64 Native Tools Command Prompt for VS 2022" 
 - Visual Studio 2019/2022
-- QT for MSVC 2019
+- QT for MSVC 2019 (if you want to build the ImageViewer example)
 
 or when using a terminal
 - Ninja Make
 - CMake
 - Any CPP Compiler, e.g. minGW
-- QT for minGW/your compiler
+- QT for minGW/your compiler (if you want to build the ImageViewer example)
 
 ## Project Structure
 
