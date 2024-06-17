@@ -3,13 +3,14 @@ This project contains different sample projects showing how to use Excelitas PCO
 which can be downloaded here: [pco.cpp](https://www.excelitas.com/product/pco-software-development-kits#custom-tab-c__)
 
 ## Requirements
+General:
 - Windows or Linux 
 
-When using "x64 Native Tools Command Prompt for VS 2019/2022" 
+When using "x64 Native Tools Command Prompt for VS 2019/2022": 
 - Visual Studio 2019/2022
 - QT for MSVC 2019 (if you want to build the ImageViewer example)
 
-or when using a terminal
+or when using a terminal:
 - Ninja Make
 - CMake
 - Any CPP Compiler, e.g. minGW
@@ -38,12 +39,12 @@ CMakeLists.txt
 ```
 
 **CMakeLists.txt** is the main cmake file and **CMakePresets.json** contains already predefined presets for building debug and release,
-both on windows and linux platforms
+both on Windows and Linux platforms.
 
 All examples are in the **src** subfolder.
 While **ImageViewer** is a small, Qt-based, GUI demo application, all other samples are one-file console programs.
 
-The **externals/pco** folder contains also a **CMakeLists.txt** file which handles the pco.cpp dependencies
+The **externals/pco** folder contains also a **CMakeLists.txt** file which handles the pco.cpp dependencies.
 
 ## Sample Description
 
@@ -79,7 +80,7 @@ For this we have two different modes:
 ### ColorConvertExample
 
 This example is similar to **SimpleExample** but additionally shows how to apply a pseudo color lut to the images of monochrome PCO cameras.  
-Thus, this example also saves RGB images for monochrome cameras
+Thus, this example also saves RGB images for monochrome cameras.
 
 ### FileModeExample
 
@@ -100,7 +101,7 @@ To keep this simple, the example just
 - ```pco::RecordMode::dicom```
 - ```pco::RecordMode::multidicom```
 
-Especially when you want to record a lot of images, we recommend to use one of the multi-image file formats (multitif, pcoraw, multidicom)
+Especially when you want to record a lot of images, we recommend to use one of the multi-image file formats (multitif, pcoraw, multidicom).
 
 ### MultiCameraExample
 
@@ -120,8 +121,8 @@ since this is the most accurate synchronization.
 ### ImageViewer
 
 This is a demo application with a graphical user interface which is based on the Qt framework.  
-- The top menu controls the recording, i.e here you can start and stop live view or record a sequence and navigate through this sequence
-- The middle part displays the image
+- The top menu controls the recording, i.e here you can start and stop live view or record a sequence and navigate through this sequence.
+- The middle part displays the image.
 - The right side contains the most important settings of the camera configuration. While the exposure time can also be changed during record, all other settings require a stop and restart of the record.
 
 ![imageviewer-gui](./doc/res/imageviewer_gui.png)
@@ -130,41 +131,41 @@ This is a demo application with a graphical user interface which is based on the
 ## Installation
 
 To use this example project you can either clone, fork or download the source code. 
-After you have configured everything to your needs you can simply configure, build and install it using cmake.
+After you have configured everything to your needs, you can simply configure, build and install it using cmake.
 
 ### Configuration
 
-The **CMakePresets.json** contain already predefined configurations for cmake builds on windows and linux.  
+The **CMakePresets.json** contain already predefined configurations for cmake builds on Windows and Linux.  
 
 Beside of the preset name and description we have the following variables which you can configure to your needs: 
 
 #### generator 
-Here we use *Ninja* as it is available both on linux and on windows systems, but you can of course change this
+Here we use *Ninja* as it is available both on Linux and on Windows systems, but you can of course change this.
 
 #### binaryDir
 This defines where the build files go to.  
-Our default here is *<preset name>/build*, so e.g. *release_lnx/build* for the *release_lnx* preset
+Our default here is *<preset name>/build*, so e.g. *release_lnx/build* for the *release_lnx* preset.
 
 #### CMAKE_BUILD_TYPE
-Build type. This matches with our preset names
+Build type. This matches with our preset names.
 
 #### CMAKE_INSTALL_PREFIX
-This defines where the files should be installed to when calling ```cmake --install```
-Our default here is *<preset name>/install*, so e.g. *release_lnx/install* for the *release_lnx* preset
+This defines where the files should be installed to when calling ```cmake --install```.
+Our default here is *<preset name>/install*, so e.g. *release_lnx/install* for the *release_lnx* preset.
 
 #### PCO_PACKAGE_INSTALL_DIR
 This specifies the root path to your installation of the **pco.cpp** package.  
 Our default here is the system wide installation path, so normally you do not need to change it.  
-If you installed pco.cpp on windows as user, you need to adapt this to the actual installation path of pco.cpp
+If you installed pco.cpp on Windows as user, you need to adapt this to the actual installation path of pco.cpp.
 
 #### QT_ROOT_DIR
 **This is only relevant for building the ImageViewer demo**
 
 This specifies the root path to your Qt installation. 
 Our default is Qt 6.4.2 with the default folder Qt suggests.  
-*You need to adapt this to the actual Qt install path on your system*
+*You need to adapt this to the actual Qt install path on your system*.
 
 #### AUTO_UPDATE_PCO_PACKAGE
 If this flag is set to true, the *./externals/pco/CMakeLists.txt* will automatically update the **pco.cpp** related files from the pco.cpp install path, e.g. when you install a new version of pco.cpp the examples will automatically be updated on the next reconfiguration.
 
-If you want to disable this mechanism, just set ```"AUTO_UPDATE_PCO_PACKAGE": false``` 
+If you want to disable this mechanism, just set ```"AUTO_UPDATE_PCO_PACKAGE": false``` .
