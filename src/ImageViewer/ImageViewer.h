@@ -37,6 +37,7 @@ class ImageViewer : public QMainWindow
 
 public:
   ImageViewer(QWidget* parent = nullptr);
+  ~ImageViewer();
 
   pco::Camera* cam;
 

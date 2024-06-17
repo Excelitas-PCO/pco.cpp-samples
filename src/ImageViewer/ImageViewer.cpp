@@ -25,6 +25,15 @@ ImageViewer::ImageViewer(QWidget* parent)
   resize(QGuiApplication::primaryScreen()->availableSize() * 4 / 5);
 }
 
+ImageViewer::~ImageViewer()
+{
+  if(cam != nullptr)
+  {
+    delete cam;
+    cam = nullptr;
+  }
+}
+
 void ImageViewer::setImage()
 {
   if (m_first_pic_global)
