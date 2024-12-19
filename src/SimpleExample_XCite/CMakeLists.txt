@@ -1,4 +1,4 @@
-set(PROJECT_NAME SimpleExample)
+set(PROJECT_NAME SimpleExample_XCite)
 set(PROJECT_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/${PROJECT_NAME}.cpp
     ${PCO_FOLDER}/pco.camera/camera.cpp

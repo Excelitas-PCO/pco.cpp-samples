@@ -381,7 +381,7 @@ void ImageViewer::createCameraSettings()
 
   if (cam != nullptr)
   {
-    if (cam->getConfiguration().noise_filter_mode == pco::UNDEF_W)
+    if (cam->getConfiguration().noise_filter_mode == UNDEF_W)
     {
       noiseFilter->setDisabled(true);
     }
@@ -651,7 +651,7 @@ void ImageViewer::cameraInit()
   cam->setExposureTime(0.01);
   cam->setDelayTime(0);
 
-  m_picture_raw.resize(cam->getConfiguration().roi, pco::DataFormat::Mono8);
+  m_picture_raw.resize(cam->getConfiguration().roi, pco::DataFormat::Mono8, cam->getRawFormat());
   m_initialConfig = cam->getConfiguration();
   m_is_colored = cam->isColored();
 

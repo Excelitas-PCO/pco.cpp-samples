@@ -10,6 +10,7 @@ set(PROJECT_SOURCES
     ${PCO_FOLDER}/pco.camera/camera.cpp
     ${PCO_FOLDER}/pco.camera/cameraexception.cpp
     ${PCO_FOLDER}/pco.camera/image.cpp
+    ${PCO_FOLDER}/pco.camera/xcite.cpp
 )
 
 # This is only to get the var QT_VERSION_MAJOR
@@ -42,6 +43,7 @@ include_directories(${PCO_FOLDER}/include)
 target_link_libraries(${PROJECT_NAME} PRIVATE pco_convert)
 target_link_libraries(${PROJECT_NAME} PRIVATE sc2_cam)
 target_link_libraries(${PROJECT_NAME} PRIVATE pco_recorder)
+target_link_libraries(${PROJECT_NAME} PRIVATE etc_xcite)
 
 if(WIN32)
     set_target_properties(${PROJECT_NAME} PROPERTIES WIN32_EXECUTABLE TRUE)

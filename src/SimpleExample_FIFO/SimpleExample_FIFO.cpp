@@ -1,4 +1,4 @@
-// SimpleExample_FIFO.cpp : Diese Datei enthält die Funktion "main". Hier beginnt und endet die Ausführung des Programms.
+// SimpleExample_FIFO.cpp
 
 //#pragma once
 

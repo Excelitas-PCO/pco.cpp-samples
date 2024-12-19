@@ -1,4 +1,4 @@
-// ColorConvertExample.cpp : Diese Datei enthält die Funktion "main". Hier beginnt und endet die Ausführung des Programms.
+// ColorConvertExample.cpp
 //
 //#pragma once
 
@@ -30,13 +30,20 @@ int main()
     if (path.empty())
       path = ".";
 
+    std::string lut_file_default;
+#ifdef PCO_LINUX
+    lut_file_default = "/opt/pco/pco.cpp/samples/ColorConvertExample/lut/LUT_rainbow.lt1";
+#else
+    lut_file_default = "C:\\Program Files\\PCO Digital Camera Toolbox\\pco.cpp\\samples\\ColorConvertExample\\lut\\LUT_rainbow.lt1";
+#endif
+
     if (!cam.isColored())
     {
       std::string lut_file;
-      std::cout << "Enter filepath to LUT file \n(default: lut/LUT_rainbow.lt1):" << std::endl;
+      std::cout << "Enter filepath to LUT file \n(default: " << lut_file_default << std::endl;
       std::getline(std::cin, lut_file);
       if (lut_file.empty())
-        lut_file = "./lut/LUT_rainbow.lt1";
+        lut_file = lut_file_default;
       if (!std::filesystem::exists(lut_file))
         throw pco::CameraException("path to LUT file is invalid."); 
 

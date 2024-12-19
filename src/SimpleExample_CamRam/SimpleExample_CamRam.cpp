@@ -1,4 +1,4 @@
-// SimpleExample.cpp : Diese Datei enthält die Funktion "main". Hier beginnt und endet die Ausführung des Programms.
+// SimpleExample.cpp
 //
 //#pragma once
 
@@ -27,8 +27,8 @@ int main()
     DWORD valid_images = camera.getCamRamNumImages();
     DWORD max_images = camera.getCamRamMaxImages();
     WORD segment = camera.getCamRamSegment();
-    Image image_latest(config.roi, DataFormat::Mono16);
-    Image image_end(config.roi, DataFormat::Mono16);
+    Image image_latest(config.roi, DataFormat::Mono16, camera.getRawFormat());
+    Image image_end(config.roi, DataFormat::Mono16, camera.getRawFormat());
 
 
 

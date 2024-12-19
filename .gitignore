@@ -49,3 +49,6 @@ bld/
 
 #[Bb]in/
 #[Ll]og/
+
+# Visual Studio
+.vs/

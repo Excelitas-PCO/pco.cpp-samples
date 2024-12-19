@@ -29,5 +29,6 @@ add_subdirectory(${CMAKE_SOURCE_DIR}/src/MultiCameraExample)
 add_subdirectory(${CMAKE_SOURCE_DIR}/src/SimpleExample)
 add_subdirectory(${CMAKE_SOURCE_DIR}/src/SimpleExample_CamRam)
 add_subdirectory(${CMAKE_SOURCE_DIR}/src/SimpleExample_FIFO)
+add_subdirectory(${CMAKE_SOURCE_DIR}/src/SimpleExample_XCite)
 # Image Viewer requires Qt installation, thus disabled by default
 #add_subdirectory(${CMAKE_SOURCE_DIR}/src/ImageViewer)
