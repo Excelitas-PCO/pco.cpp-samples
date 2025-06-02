@@ -34,7 +34,7 @@ int main()
     
     for (int i = 0; i < image_count; i++)
     {
-      cam.waitForNewImage();
+      cam.waitForNewImage(true, 5);
       if (cam.isColored()) { cam.image(img, 0, pco::DataFormat::BGR8); }
       else { cam.image(img, 0, pco::DataFormat::Mono8); }
       width = img.width();
