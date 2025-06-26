@@ -1,3 +1,6 @@
+#include <thread>
+#include <chrono>
+
 #include "ImageViewer.h"
 
 ImageViewer::ImageViewer(QWidget* parent)

@@ -1,3 +1,5 @@
+#include <iostream>
+
 #include "ImageViewer.h"
 
 int main(int argc, char* argv[])

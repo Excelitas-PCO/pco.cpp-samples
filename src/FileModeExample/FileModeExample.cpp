@@ -1,12 +1,10 @@
 // SimpleExample.cpp
-//
-//#pragma once
-
-#include <stdio.h>
-#include <string.h>
-#include "pco.camera/stdafx.h"
+#include <string>
+#include <iostream>
+#include <filesystem>
+#include <thread>
+#include <chrono>
 #include "pco.camera/camera.h"
-#include "pco.camera/cameraexception.h"
 
 int main()
 {

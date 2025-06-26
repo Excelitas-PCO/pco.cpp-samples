@@ -1,8 +1,5 @@
 #pragma once
 #include <QMainWindow>
-#include "pco.camera/stdafx.h"
-#include "pco.camera/camera.h"
-#include "pco.camera/cameraexception.h"
 #include <QColorSpace>
 #include <QLabel>
 #include <QMenuBar>
@@ -22,6 +19,8 @@
 #include <qpushbutton.h>
 #include <qmessagebox.h>
 #include <chrono>
+
+#include "pco.camera/camera.h"
 
 QT_BEGIN_NAMESPACE
 class QAction;
