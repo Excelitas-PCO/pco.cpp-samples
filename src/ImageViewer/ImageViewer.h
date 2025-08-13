@@ -48,6 +48,9 @@ public:
   pco::ConvertControlPseudoColor m_conv_pseudo_col;
   pco::ConvertControlMono m_conv_mono;
 
+  // Events
+  void closeEvent(QCloseEvent *event) override;
+
 private slots:
   void zoomIn();
   void zoomOut();

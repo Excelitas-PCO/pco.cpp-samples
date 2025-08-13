@@ -30,6 +30,7 @@ ImageViewer::ImageViewer(QWidget* parent)
 
 ImageViewer::~ImageViewer()
 {
+  // Just for security, normally it has already been deleted in closeEvent
   if(cam != nullptr)
   {
     delete cam;
@@ -58,8 +59,17 @@ void ImageViewer::setImage()
   }
 }
 
-void ImageViewer::zoomIn()
+void ImageViewer::closeEvent(QCloseEvent *event)
+{
+  // Close and Delete Camera
+  if(cam != nullptr)
+  {
+    delete cam;
+    cam = nullptr;
+  }
+}
 
+void ImageViewer::zoomIn()
 {
   scaleImage(1.25);
 }
@@ -70,7 +80,6 @@ void ImageViewer::zoomOut()
 }
 
 void ImageViewer::normalSize()
-
 {
   imageLabel->adjustSize();
   m_scaleFactor = 1.0;
